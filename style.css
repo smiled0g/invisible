@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-weight: bold;
+  position: relative;
+  flex: initial;
+  font-size: 36px;
+  line-height: 90px;
+  height: 90px;
+  margin-left: 30px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.game {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
