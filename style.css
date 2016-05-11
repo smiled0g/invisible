@@ -4,6 +4,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Quicksand', sans-serif;
+  letter-spacing: -0.05em;
   display: flex;
   flex-direction: column;
 }
@@ -27,4 +28,103 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.play {
+  flex: initial;
+  height: 600px;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.canvas {
+  height: 600px;
+  width: 600px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas .row {
+  display: flex;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes glowCell {
+  from { opacity: 1; }
+  50% { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+.canvas .cell.self.highlight {
+  animation-name: glowCell;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.canvas .cell {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.canvas .cell img {
+  width: 100%;
+  height: 100%:
+  position: absolute;
+}
+
+.canvas .cell:hover img {
+  width: 120%;
+  height: 120%:
+  margin-top: -10%;
+  margin-left: -10%;
+}
+
+.narration {
+  height: 400px;
+  margin-top: 200px;
+  width: 600px;
+  float:left;
+  text-align: center;
+}
+
+.narration .quote {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.narration .description {
+  font-size: 22px;
+  line-height: 28px;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 100px;
+  flex: initial;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 800px;
+  max-width: 80%;
+  border-right: solid 5px #333;
+  border-left: solid 5px #333;
+  border-radius: 10px;
+  height: 40px;
+  margin: 0 auto;
+  display: none;
+}
+
+.progress-bar-fill {
+  background: rgb(256,144,12);
+  border-radius: 8px;
+  width: 0%;
+  height: 100%;
 }

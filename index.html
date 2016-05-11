@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Invisible</title>
+  <title>Silent</title>
   <!-- Stylesheets -->
   <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
@@ -10,33 +10,31 @@
 <body>
 
   <div class="header">
-    Invisible: Can you still find me?
+    The world where words mean nothing to me.
   </div>
   <div class="game">
-
+    <div class="spacer"></div>
+    <div class="play">
+      <div class="canvas"></div>
+      <div class="narration">
+        <div class="quote"></div>
+        <div class="description"></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="progress">
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+      </div>
+    </div>
   </div>
-
-  <!-- Facebook Graph API -->
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '240036333030543',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 
   <!-- Script -->
   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="js/levels.js"></script>
   <script src="js/engine.js"></script>
+  <script>
+    run();
+  </script>
 </body>
 </html>
